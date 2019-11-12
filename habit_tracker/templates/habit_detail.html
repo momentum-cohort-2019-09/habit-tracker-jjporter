@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="habit-entries">
+  <div class="habit-entry-form">
+    <h2>How did you do on your goal today?</h2>
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{ form }}
+      <button type="submit">Post</button>
+    </form>
+  </div>
+  <div class="habit-details">
+    <h2 class="daily-habit">Daily Entry</h2>
+      {% for entry in records %}
+      <div class="daily-habit-container">
+        <p>What you accomplished: {{ entry.actual }}</p>
+        <p>Did you accomplish your goal?: {{ entry.met_goal }}</p>
+        <p>Completed by: {{ entry.time_complete }}</p>
+        <p>Comments: {{ entry.comment }}</p>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

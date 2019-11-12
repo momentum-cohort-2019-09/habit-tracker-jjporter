@@ -1,0 +1,23 @@
+* {
+  max-width: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.habit-display {
+  border-color: black;
+  margin-bottom: 20px;
+}
+
+.daily-habit {
+  padding: 1.5rem 0;
+}
+
+.your-habits {
+  padding: 2rem 0;
+}
+
+.daily-habit-container {
+  border-style: inset;
+  border-spacing: 10px;
+}
